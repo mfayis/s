@@ -1,0 +1,37 @@
+<section>
+  <div class="container">
+    <div class="row mt-4 ">
+      <a href="/" class="btn btn-success ml-auto ">HOME</a></div>
+    <table class="table mt-2">
+  <thead>
+    <tr>
+      <th scope="col">DATE</th>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">PINCODE</th>
+      <th scope="col">MOBILE</th>
+      <th>AMOUNT</th>
+      <th>PAYMENT</th>
+      <th>STATUS</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    
+   {{#each orders}}
+    <tr>
+      <th scope="row">{{this.date}}</th>
+      <td>{{this.deliveryDetails.address}}</td>
+     <td>{{this.deliveryDetails.pincode}}</td>
+      <td>{{this.deliveryDetails.mobile}}</td>
+      <td>{{totalAmount}}</td>
+      <td>{{this.paymentMethod}}</td>
+      <td>{{this.orderStatus}}</td>
+    <td><a href="/view-order-products/{{this._id}}" class="btn btn-primary">View Products</a></td>
+   
+       
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+  </div>
+</section>

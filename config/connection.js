@@ -12,10 +12,9 @@ module.exports.connect=function(done){
     done()
     })
     
- 
-
 }
 
 module.exports.get=function(){
+  
 return state.db
 }

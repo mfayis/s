@@ -1,0 +1,37 @@
+<section>
+  <div class="container">
+
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">ITEM</th>
+          <th scope="col">Title</th>
+          <th scope="col">PRICE</th>
+        
+          <th scope="col"></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {{#each products}}
+        <tr>
+
+          <td><img style="width:70px;height:70px" src="/product-images/{{this.product._id}}.jpg" alt=""></td>
+          <td>{{this.product.Name}}</td>
+          <td>{{this.product.Price}}</td>
+         
+          
+
+         
+
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    <hr>
+    <div class="float-right mr-5">
+ 
+     
+      </div>
+  </div>
+</section>
